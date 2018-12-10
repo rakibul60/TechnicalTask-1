@@ -5,6 +5,7 @@ app.controller('ContactListController',function($location,$state,$scope,$log,con
     var vm = this;
     
 
+<<<<<<< HEAD
     vm.contacts = contacts;//function assign
     vm.contactss=[];
     vm.name=vm.name;
@@ -34,6 +35,17 @@ app.controller('ContactListController',function($location,$state,$scope,$log,con
     }
     function createErrorFn(data){
         $log.info(data.error)
+=======
+    vm.contacts = contacts;
+    vm.contactss=[];
+    
+    
+   
+    function contacts() {
+        contactService.contactCreate(vm.name,vm.phone_number);
+        $state.go('list');
+      
+>>>>>>> 1769b9a223e965daee321210593dd45cfd227a71
     }
 
     getContacts();

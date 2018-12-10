@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div class="center raj col s12 m4 l3 ">
 
         <div class="center row col s9 offset-s6">
@@ -39,10 +40,32 @@
                                         <p ng-show="theForm.number.$error.maxlength" class="help-block">Number is too
                                                 long.It contains only
                                                 9-15 number </p>
+=======
+<div class="center">
+        <div class="col-md-12">
+                <h2>Edit your Contact Information.</h2>
+                <br>
+
+
+
+                <div>
+                        <form name="theForm">
+                                <div class="form-group">
+                                        <label for="username">Name: </label>
+                                        <input type="text" class="from-control" id="username" ng-model="vm.name"
+                                                required="required">
+                                </div>
+                                <div class="form-group">
+                                        <label for="Number">Number: </label>
+                                        <input type="text" class="from-control" ng-minlength="7" id="number" ng-model="vm.phone_number"
+                                                required="required" number-check>
+
+>>>>>>> 1769b9a223e965daee321210593dd45cfd227a71
 
                                 </div>
 
 
+<<<<<<< HEAD
                                 <div class="form-group  col s3">
                                         <button class="btn btn-primary" type="submit" ng-model="vm.button" ng-disabled="theForm.name.$dirty && theForm.name.$invalid ||  
                                         theForm.number.$dirty && theForm.number.$invalid"
@@ -54,12 +77,21 @@
                                         <button class="btn btn-danger" type="submit" ng-model="vm.button" ng-disabled="theForm.name.$dirty && theForm.name.$invalid ||  
                                                 theForm.number.$dirty && theForm.number.$invalid"
                                                 ng-click="vm.deleteContact()">Delete</button>
+=======
+                                <div class="form-group">
+                                        <button class="btn btn-primary" type="submit" ng-click="vm.updateContact()">update</button>
+
+                                        <button class="btn btn-danger" type="submit" ng-click="vm.deleteContact()">Delete</button>
+>>>>>>> 1769b9a223e965daee321210593dd45cfd227a71
 
                                 </div>
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 1769b9a223e965daee321210593dd45cfd227a71
                         </form>
 
                 </div>

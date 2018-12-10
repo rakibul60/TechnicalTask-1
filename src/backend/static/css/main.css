@@ -11,10 +11,14 @@ body {
       padding: 10px;
   }
 
+<<<<<<< HEAD
   .center .raj{
   background-color:LightGrey;
    border-radius: 15px;
   }
+=======
+  
+>>>>>>> 1769b9a223e965daee321210593dd45cfd227a71
   table tr th{
     background-color: darkcyan;
   }
