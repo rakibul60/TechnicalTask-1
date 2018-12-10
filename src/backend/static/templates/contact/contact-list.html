@@ -1,0 +1,30 @@
+<div class="center">
+    <div class="col s12">
+        <h3>List of Contacts</h3>
+
+        <table class="table table-bordered">
+            <tr>
+
+                <th>id</th>
+                <th>Name</th>
+                <th>Number</th>
+
+            </tr>
+
+
+            <tr ng-repeat="contact in vm.contactss" ui-sref="edit({id:contact.id})">
+
+                <td>{{contact.id}}</td>
+                <td>{{contact.name}} </td>
+                <td>{{contact.phone_number}} </td>
+
+            </tr>
+
+
+
+
+
+        </table>
+
+    </div>
+</div>

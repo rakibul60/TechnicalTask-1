@@ -1,0 +1,67 @@
+<div class="center raj col s12 m4 l3 ">
+
+        <div class="center row col s9 offset-s6">
+
+
+                <div class="center row col s9 offset-s6">
+                        <h6>Edit your Contact Information.</h6><br>
+
+                        <form name="theForm" class="col s9 offset-s6">
+                        
+                                <div class="form-group row offset-s6">
+                                        <label for="name" class="col s3 col-form-label">Name: </label>
+                                        <input type="text" name="name" class="from-control" placeholder="Ex: Rakibul"
+                                                id="name" ng-model="vm.name" ng-minlength="3" ng-maxlength="18"
+                                                required>
+                                        <span style="color:red" ng-show="theForm.name.$dirty && theForm.name.$invalid">
+                                                <span ng-show="theForm.name.$error.required">Name is required.</span>
+                                        </span>
+                                        <p ng-show="theForm.name.$error.minlength" class="help-block" style="color:red">name
+                                                is too short.</p>
+                                        <p ng-show="theForm.name.$error.maxlength" class="help-block">name is too long.
+                                        </p>
+
+                                </div>
+
+                                <div class="form-group row offset-s6">
+                                        <label for="number" class="col s3 col-form-label">Number: </label>
+                                        <input type="text" class="from-control" id="number" name="number" ng-model="vm.phone_number"
+                                                ng-minlength="9" ng-maxlength="15" placeholder="Input number only"
+                                                required number-check>
+                                        <span style="color:red" ng-show="theForm.number.$dirty && theForm.number.$invalid">
+                                                Number is required
+                                        </span>
+
+
+                                        <p ng-show="theForm.number.$error.minlength" class="help-block">Number is too
+                                                short.It contains only
+                                                9-15 number</p>
+                                        <p ng-show="theForm.number.$error.maxlength" class="help-block">Number is too
+                                                long.It contains only
+                                                9-15 number </p>
+
+                                </div>
+
+
+                                <div class="form-group  col s3">
+                                        <button class="btn btn-primary" type="submit" ng-model="vm.button" ng-disabled="theForm.name.$dirty && theForm.name.$invalid ||  
+                                        theForm.number.$dirty && theForm.number.$invalid"
+                                                ng-click="vm.updateContact()">update</button>
+
+                                </div>
+
+                                <div class="form-group offset-s6 col s3">
+                                        <button class="btn btn-danger" type="submit" ng-model="vm.button" ng-disabled="theForm.name.$dirty && theForm.name.$invalid ||  
+                                                theForm.number.$dirty && theForm.number.$invalid"
+                                                ng-click="vm.deleteContact()">Delete</button>
+
+                                </div>
+
+
+
+
+                        </form>
+
+                </div>
+        </div>
+</div>

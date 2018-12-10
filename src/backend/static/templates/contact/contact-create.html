@@ -1,0 +1,57 @@
+<div class="center col s9">
+    <div class="col s9 raj offset-s4">
+        <h4>Create Your own Contact</h4>
+        <br>
+
+        <form ng-submit="vm.contacts()" name="theForm" novalidate>
+
+            <div class="row">
+                <div class="input-field col s3">
+
+                    <i class="material-icons prefix">account_circle</i>
+                    <input type="text" name="name" class="from-control" id="icon_prefix" class="validate" ng-model="vm.name"
+                        ng-minlength="3" ng-maxlength="18" required>
+                    <label for="icon_prefix" class="col s3 col-form-label">Name: </label>
+                    <span style="color:red" ng-show="theForm.name.$dirty && theForm.name.$invalid">
+                        <span ng-show="theForm.name.$error.required">Name is required.</span>
+                    </span>
+                    <p ng-show="theForm.name.$error.minlength" class="help-block" style="color:red">name is too short.</p>
+                    <p ng-show="theForm.name.$error.maxlength" class="help-block">name is too long. </p>
+
+                </div>
+
+
+                <div class="input-field  offset-s1 col s3">
+                    <i class="material-icons prefix">phone</i>
+                    <input type="text" class="from-control" id="number" name="number" ng-model="vm.phone_number"
+                        ng-minlength="9" ng-maxlength="15" required number-check>
+                    <label for="number" class="col s3 col-form-label">Number: </label>
+
+                    <span style="color:red" ng-show="theForm.number.$dirty && theForm.number.$invalid">
+                        <span ng-show="theForm.name.$error.required">Name is required.</span>
+                    </span>
+
+
+                    <p ng-show="theForm.number.$error.minlength" class="help-block">Number is too short.It contains
+                        only
+                        9-15 number</p>
+                    <p ng-show="theForm.number.$error.maxlength" class="help-block">Number is too long.It contains only
+                        9-15 number </p>
+
+                </div>
+
+
+                <div class="col s3">
+                    <button class="btn btn-primary" type="submit" ng-disabled="(theForm.name.$dirty && theForm.name.$invalid )  ||  
+                    (theForm.number.$dirty && theForm.number.$invalid)">Submit</button>
+
+
+                </div>
+
+
+            </div>
+
+
+        </form>
+
+    </div>
